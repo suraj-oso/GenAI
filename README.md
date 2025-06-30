@@ -152,7 +152,7 @@ AI agents = LLMs + tools + memory + planner.
 
 ```
 ┌────────────────────────┐
-│    User Input          │
+│       User Input       │
 └────────────┬───────────┘
              ↓
   [Model Context Protocol]
