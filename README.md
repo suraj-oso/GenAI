@@ -23,6 +23,7 @@ LLM stands for **Large Language Model**. These are transformer-based neural netw
 [Stacked Layers (12–96)]
      ↓
 [Output Probabilities → Decoded Text]
+
 ```
 
 ### 🔄 Key Concepts:
