@@ -24,6 +24,7 @@ LLM stands for **Large Language Model**. These are transformer-based neural netw
 [Stacked Layers (12–96)]
      ↓
 [Output Probabilities → Decoded Text]
+
 ```
 
 ### 🔄 Key Concepts:
@@ -161,7 +162,7 @@ AI agents = LLMs + tools + memory + planner.
 
 ```
 ┌────────────────────────┐
-│    User Input          │
+│       User Input       │
 └────────────┬───────────┘
              ↓
   [Model Context Protocol]
