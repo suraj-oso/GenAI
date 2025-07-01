@@ -1,5 +1,6 @@
-
 # 🧠 Complete Guide to LLMs, ChatGPT, Model Context Protocol, and AI Agents
+
+# All Project Credit by Rohit Negi
 
 ---
 
@@ -27,14 +28,14 @@ LLM stands for **Large Language Model**. These are transformer-based neural netw
 
 ### 🔄 Key Concepts:
 
-| Term                | Description |
-|---------------------|-------------|
-| Tokenization        | Breaking input text into tokens |
-| Self-Attention      | Words look at others for context |
-| Decoder-Only Model  | Only generates output, no bidirectional input |
-| Context Window      | Max number of tokens LLM can "see" |
-| Pretraining         | Unsupervised next-word prediction |
-| Fine-tuning         | Supervised task or user alignment |
+| Term               | Description                                   |
+| ------------------ | --------------------------------------------- |
+| Tokenization       | Breaking input text into tokens               |
+| Self-Attention     | Words look at others for context              |
+| Decoder-Only Model | Only generates output, no bidirectional input |
+| Context Window     | Max number of tokens LLM can "see"            |
+| Pretraining        | Unsupervised next-word prediction             |
+| Fine-tuning        | Supervised task or user alignment             |
 
 ---
 
@@ -70,6 +71,7 @@ ChatGPT is built on an LLM (like GPT-4). It uses a **Model Context Protocol (MCP
 MCP = **Structured context** used to drive multi-turn conversations in LLMs.
 
 ### 📦 Format (OpenAI Style):
+
 ```json
 [
   { "role": "system", "content": "You are a code assistant." },
@@ -80,6 +82,7 @@ MCP = **Structured context** used to drive multi-turn conversations in LLMs.
 ```
 
 ### 💡 Roles:
+
 - `system`: Instructions
 - `user`: Input
 - `assistant`: Model replies
@@ -94,13 +97,13 @@ AI agents = LLMs + tools + memory + planner.
 
 ### 🛠 Components:
 
-| Component   | Description |
-|-------------|-------------|
-| LLM         | Brain (e.g., GPT-4, Claude) |
-| Tools       | Code, Search, APIs |
-| Memory      | Long-term state or storage |
-| Planner     | Decides next actions |
-| Execution   | Acts on environment |
+| Component | Description                 |
+| --------- | --------------------------- |
+| LLM       | Brain (e.g., GPT-4, Claude) |
+| Tools     | Code, Search, APIs          |
+| Memory    | Long-term state or storage  |
+| Planner   | Decides next actions        |
+| Execution | Acts on environment         |
 
 ### 🧠 Example Agent Loop:
 
@@ -117,6 +120,7 @@ AI agents = LLMs + tools + memory + planner.
 ```
 
 ### 🔄 Used In:
+
 - LangChain
 - AutoGPT
 - OpenAI Assistants v2
@@ -129,20 +133,25 @@ AI agents = LLMs + tools + memory + planner.
 ### 📗 Step-by-Step Notes
 
 #### Step 1: Understand Transformers
+
 - 📘 Read: https://jalammar.github.io/illustrated-transformer/
 
 #### Step 2: Learn GPT Architecture
+
 - 📝 Paper: https://arxiv.org/abs/2005.14165
 - Course: https://huggingface.co/learn/nlp-course
 
 #### Step 3: Try OpenAI’s API (MCP in Action)
+
 - 📚 Guide: https://platform.openai.com/docs/guides/gpt
 
 #### Step 4: Dive into Context & Tool Use
+
 - Guide: https://platform.openai.com/docs/guides/function-calling
 - LangChain: https://docs.langchain.com/
 
 #### Step 5: Build or Explore Agents
+
 - AutoGPT: https://github.com/Torantulino/Auto-GPT
 - LangGraph: https://docs.langgraph.dev/
 
@@ -169,11 +178,13 @@ AI agents = LLMs + tools + memory + planner.
 ## 🔗 7. Useful Resources
 
 ### Core Concepts:
+
 - GPT-3 Paper: https://arxiv.org/abs/2005.14165
 - GPT-4 Blog: https://openai.com/research/gpt-4
 - Illustrated GPT: https://jalammar.github.io/illustrated-gpt2/
 
 ### Tools and Agents:
+
 - LangChain: https://www.langchain.com/
 - HuggingFace: https://huggingface.co/
 - OpenAI Assistants: https://platform.openai.com/docs/assistants/overview
@@ -184,6 +195,7 @@ AI agents = LLMs + tools + memory + planner.
 ## ✅ Conclusion
 
 This guide helps you understand how:
+
 - LLMs process input and generate text
 - ChatGPT uses system+user+assistant context (MCP)
 - AI Agents wrap LLMs with memory and tools
@@ -191,7 +203,6 @@ This guide helps you understand how:
 ---
 
 > ✨ Publish this on GitHub as a README.md or learning guide in your AI folder!
-
 
 ---
 
@@ -210,6 +221,7 @@ LLMs **don't have true understanding or consciousness**. They generate output ba
 LLMs often generate **false but confident-sounding answers**. This is called **hallucination**.
 
 #### ❌ Example:
+
 > "Strawberries are rich in vitamin RR-2 and contain content-3."
 
 - ❗ This is **completely made up**.
@@ -223,10 +235,12 @@ LLMs often generate **false but confident-sounding answers**. This is called **h
 ChatGPT can sometimes write code, but **cannot execute or verify it** unless in a special environment (like the Code Interpreter or APIs).
 
 #### ❌ Example:
+
 > You ask: “Sort this array using Python.”
 > It writes the code, but doesn’t **run** it unless you enable tools.
 
 This means:
+
 - It can suggest **non-working code**
 - It can guess incorrectly if the logic is complex
 
@@ -235,6 +249,7 @@ This means:
 ### 🔐 4. **They Don't Have Real-Time Awareness**
 
 LLMs:
+
 - Don't know current time/date (unless fed as context)
 - Can't access the internet (unless tools like `browser` are enabled)
 - Can't interact with files or hardware
@@ -243,24 +258,24 @@ LLMs:
 
 ## 📌 9. Other Common Limitations & Gotchas
 
-| Limitation            | Description |
-|------------------------|-------------|
-| **Token Limit**        | Older messages drop after hitting token max |
-| **Bias**               | Trained on biased datasets |
-| **Inconsistency**      | May give different answers for same question |
-| **No Emotions**        | Simulates personality but has no feelings |
-| **Language Only**      | Can't see, hear, or sense anything outside text (unless multimodal) |
+| Limitation        | Description                                                         |
+| ----------------- | ------------------------------------------------------------------- |
+| **Token Limit**   | Older messages drop after hitting token max                         |
+| **Bias**          | Trained on biased datasets                                          |
+| **Inconsistency** | May give different answers for same question                        |
+| **No Emotions**   | Simulates personality but has no feelings                           |
+| **Language Only** | Can't see, hear, or sense anything outside text (unless multimodal) |
 
 ---
 
 ## 🧠 10. Real-World Failure Cases
 
-| Case | What Went Wrong |
-|------|------------------|
-| 🍕 Pizza Delivery Bot | Gave street names that don't exist |
-| 🧾 Legal Assistant | Hallucinated fake court cases |
-| 📈 Financial Bot | Mixed up historical data with predictions |
-| ⚕️ Medical Bot | Invented non-existent drugs or interactions |
+| Case                  | What Went Wrong                             |
+| --------------------- | ------------------------------------------- |
+| 🍕 Pizza Delivery Bot | Gave street names that don't exist          |
+| 🧾 Legal Assistant    | Hallucinated fake court cases               |
+| 📈 Financial Bot      | Mixed up historical data with predictions   |
+| ⚕️ Medical Bot        | Invented non-existent drugs or interactions |
 
 ---
 
@@ -279,4 +294,3 @@ Large Language Models are **amazing pattern matchers**, but they are **not alway
 - 🗃 Verified data sources (RAG)
 - 🧠 Reasoning modules (Agents)
 - 🧪 Human review (for safety)
-
