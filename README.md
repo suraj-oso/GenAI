@@ -1,6 +1,5 @@
 # 🧠 Complete Guide to LLMs, ChatGPT, Model Context Protocol, and AI Agents
 
-# All Project Credit by Rohit Negi
 
 ---
 
